@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFastPay</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <style>
+      body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('https://miro.medium.com/v2/resize:fit:1200/1*wDk45m4nCiLj8ofa0xeizA.jpeg');
+        background-size: cover;
+        background-position: center;
+        opacity: 0.85; 
+        z-index: -1; 
+      }
+    </style>
+  </head>
+  <body class="bg-gradient-to-r from-green-400 to-white-600 text-foreground">
+    <div class="flex flex-col items-center justify-center min-h-screen">
+      <div class="w-full max-w-md p-8 bg-card rounded-lg shadow-lg transform transition-all duration-300 hover:shadow-xl">
+        <h1 class="text-5xl font-arial text-primary text-center">BFastPay</h1>
+        <h2 class="mt-2 text-lg text-muted-foreground text-center">Acesse sua conta</h2>
+        
+        <form action="../src/login.php" method="POST" class="mt-6">
+          <div class="mb-6">
+            <label class="block text-sm text-muted-foreground" for="cpf">CPF</label>
+            <input type="text" id="cpf" name="cpf" class="w-full p-4 border border-border rounded-md focus:outline-none focus:ring focus:ring-ring transition duration-200" placeholder="Digite seu CPF" required />
+          </div>
+          
+          <div class="mb-6">
+            <label class="block text-sm text-muted-foreground" for="senha">Digite sua senha</label>
+            <input type="password" id="senha" name="senha" class="w-full p-4 border border-border rounded-md focus:outline-none focus:ring focus:ring-ring transition duration-200" placeholder="Digite sua senha" required />
+          </div>
+          
+          <button type="submit" class="text-center p-4 mt-4 bg-primary rounded-md shadow-md hover:bg-primary/80 transition duration-200">
+            Entrar
+          </button>
+        
+          <div class="mt-2 text-center">
+            <a href="lamento.html" class="text-secondary hover:underline">Esqueci minha senha</a>
+          </div>
+        </form>        
+
+      </div>
+    </div>
+  </body>
+</html>
+
