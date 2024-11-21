@@ -1,0 +1,12 @@
+CREATE DATABASE bfpays_db;
+
+USE bfpays_db;
+
+CREATE TABLE USERS (
+
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    cpf VARCHAR(14) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    senha VARCHAR(255) NOT NULL
+
+);
